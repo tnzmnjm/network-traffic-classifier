@@ -39,7 +39,37 @@ The models were rigorously evaluated using a variety of metrics, including preci
 For a more detailed breakdown of the attacks and traffic analysis, refer to the CIC's dataset description at [UNB CIC Datasets](https://www.unb.ca/cic/datasets/ddos-2019.html).
 
 
-## Results + charts
+## Results and Analysis
+
+The project aimed to develop machine learning models to distinguish between benign and DDoS attack traffic within network data. The Logistic Regression and XGBoost models were trained and tested on the CICDDoS2019 dataset, and their performance was evaluated based on accuracy, precision, recall, and AUC scores.
+
+### Logistic Regression
+- **Training**: Accuracy: 94.16%, Precision: 94.31%, Recall: 94.16%, AUC: 94.16%
+- **Validation**: Accuracy: 94.40%, Precision: 94.50%, Recall: 94.40%, AUC: 94.40%
+- **Test**: Accuracy: 82.46%, Precision: 89.98%, Recall: 82.46%, AUC: 88.42%
+
+The Logistic Regression model demonstrated high effectiveness on the training and validation datasets. However, the test recall indicates that the model may miss a higher proportion of positive cases (attacks) when subjected to new, unseen data.
+
+### XGBoost
+- **Training**: Accuracy: 99.36%, Precision: 99.36%, Recall: 99.36%, AUC: 99.36%
+- **Validation**: Accuracy: 96.10%, Precision: 96.30%, Recall: 96.10%, AUC: 96.10%
+- **Test**: Accuracy: 81.28%, Precision: 89.85%, Recall: 81.28%, AUC: 87.96%
+
+XGBoost outperformed Logistic Regression in training and validation. However, it too experienced a drop in recall on the test data, suggesting challenges in consistently identifying attack instances across different data segments.
+
+### Evaluation Charts
+Performance of the models is further detailed in the charts below, illustrating the trade-offs between various evaluation metrics.
+
+![ROC Curve](path/to/roc_curve.png)
+*ROC curves showing the true positive rate against the false positive rate for both models.*
+
+![Precision-Recall Curve](path/to/precision_recall_curve.png)
+*Precision-Recall curves highlighting the balance between precision and recall in model predictions.*
+
+### Discussion
+The reduction in recall on the test set for both models is a critical observation, particularly in the field of cybersecurity where failing to detect an attack can have significant consequences. It suggests a need for further model refinement, perhaps through additional feature engineering, data augmentation, or advanced model tuning, to improve the models' ability to generalize to new data.
+
+Both models showed a promising ability to classify network traffic, with XGBoost displaying a particularly strong capability to learn complex patterns. Nonetheless, the drop in test recall underscores the importance of continuous model evaluation and updating to maintain high performance as new attack vectors emerge.
 
 
 ## Prerequisites
