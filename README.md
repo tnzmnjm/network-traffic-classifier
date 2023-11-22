@@ -60,11 +60,11 @@ XGBoost outperformed Logistic Regression in training and validation. However, it
 ### Evaluation Charts
 Performance of the models is further detailed in the charts below, illustrating the trade-offs between various evaluation metrics.
 
-![ROC Curve](path/to/roc_curve.png)
-*ROC curves showing the true positive rate against the false positive rate for both models.*
+<img src="docs/roc.png">
+* ROC curves showing the true positive rate against the false positive rate for both models.*
 
-![Precision-Recall Curve](path/to/precision_recall_curve.png)
-*Precision-Recall curves highlighting the balance between precision and recall in model predictions.*
+<img src="docs/precision-recall.png">
+* Precision-Recall curves highlighting the balance between precision and recall in model predictions.*
 
 ### Discussion
 The reduction in recall on the test set for both models is a critical observation, particularly in the field of cybersecurity where failing to detect an attack can have significant consequences. It suggests a need for further model refinement, perhaps through additional feature engineering, data augmentation, or advanced model tuning, to improve the models' ability to generalize to new data.
