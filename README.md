@@ -12,8 +12,31 @@ The system includes Exploratory Data Analysis (EDA), pre-processing pipelines, L
 ## Dataset
 The dataset used in this project is the CICDDoS2019, available on [Kaggle](https://www.kaggle.com/datasets/dhoogla/cicddos2019). The CICDDoS2019 dataset is created and maintained by the Canadian Institute for Cybersecurity (CIC). For more detailed feature descriptions, visit the [CIC's official dataset page](https://www.unb.ca/cic/datasets/ddos-2019.html).
 
-## Methodology - training process
 
+## Methodology
+
+The project utilizes the CICDDoS2019 dataset, which includes both benign and the most up-to-date common DDoS attacks, reflecting real-world network traffic data. The dataset encompasses labeled flows based on timestamps, source/destination IPs, ports, protocols, and attack types, generated using CICFlowMeter-V3.
+
+### Data Processing
+To ensure the quality and relevance of the data used for model training, the following steps were undertaken:
+
+1. **Sampling**: Given the class imbalance within the dataset, stratified sampling was employed to maintain the distribution of categories. A balanced dataset was created by taking an equal number of 'Benign' and 'Attack' data points, which was crucial for training unbiased models.
+
+2. **Feature Selection**: Based on my domain knowledge and feature correlation analysis, key features were selected for inclusion in the model training process. These features included network traffic descriptors like 'Flow Duration', 'Packet Length Mean', and 'Fwd IAT Mean', among others.
+
+3. **Scaling**: Before feature selection and analysis, the data was scaled using standard scaling techniques. This was to ensure that the feature values had a standard normal distribution, which is beneficial for the performance of many machine learning algorithms.
+
+### Model Training
+Two machine learning models were trained to classify network traffic:
+
+1. **Logistic Regression**: A baseline model that provides a reference for the performance of more complex models.
+2. **XGBoost**: An advanced model that uses gradient boosting to provide improved classification accuracy.
+
+### Evaluation
+The models were rigorously evaluated using a variety of metrics, including precision-recall curves, ROC curves, and AUC scores, to ensure robustness and reliability in classifying network traffic as either 'Benign' or 'Attack'.
+
+
+For a more detailed breakdown of the attacks and traffic analysis, refer to the CIC's dataset description at [UNB CIC Datasets](https://www.unb.ca/cic/datasets/ddos-2019.html).
 
 
 ## Results + charts
