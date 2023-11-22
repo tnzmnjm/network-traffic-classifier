@@ -1,16 +1,22 @@
 # Network Traffic Classifier
-This project implements a network traffic classification system designed to identify different types of TCP/UDP based network attacks like NTP, DNS, LDAP, SNMP, SSDP and TFTP.
+This project implements a network traffic classification system designed to identify different types of TCP/UDP based network attacks like NTP, DNS, LDAP, SNMP, and TFTP.
 
-21*9
+
+<img src="banner_photo.png" width="700" height="350">
+
+
 ## Description
- The system includes Exploratory Data Analysis (EDA), pre-processing pipelines, Logistic Regression and XGBoost classification models, and evaluation metrics to assess performance.
+The system includes Exploratory Data Analysis (EDA), pre-processing pipelines, Logistic Regression and XGBoost classification models, and evaluation metrics to assess performance.
 
-## Results + charts
 
 ## Dataset
 The dataset used in this project is the CICDDoS2019, available on [Kaggle](https://www.kaggle.com/datasets/dhoogla/cicddos2019). The CICDDoS2019 dataset is created and maintained by the Canadian Institute for Cybersecurity (CIC). For more detailed feature descriptions, visit the [CIC's official dataset page](https://www.unb.ca/cic/datasets/ddos-2019.html).
 
 ## Methodology - training process
+
+
+
+## Results + charts
 
 
 ## Prerequisites
