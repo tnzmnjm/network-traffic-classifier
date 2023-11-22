@@ -1,12 +1,12 @@
 # Network Traffic Classifier
-This project implements a network traffic classification system designed to identify different types of TCP/UDP based network attacks like NTP, DNS, LDAP, SNMP, and TFTP.
+This project implements a network traffic classification system designed to identify different types of TCP/UDP based network attacks on NTP, DNS, LDAP, SNMP, and TFTP protocols.
 
 
 <img src="banner_photo.png" width="700" height="350">
 
 
 ## Description
-The system includes Exploratory Data Analysis (EDA), pre-processing pipelines, Logistic Regression and XGBoost classification models, and evaluation metrics to assess performance.
+The repository includes Exploratory Data Analysis (EDA), pre-processing pipelines, Logistic Regression and XGBoost classification models, and evaluation metrics to assess performance.
 
 
 ## Dataset
@@ -36,7 +36,7 @@ Two machine learning models were trained to classify network traffic:
 The models were rigorously evaluated using a variety of metrics, including precision-recall curves, ROC curves, and AUC scores, to ensure robustness and reliability in classifying network traffic as either 'Benign' or 'Attack'.
 
 
-For a more detailed breakdown of the attacks and traffic analysis, refer to the CIC's dataset description at [UNB CIC Datasets](https://www.unb.ca/cic/datasets/ddos-2019.html).
+For reference, refer to the CIC's dataset description at [UNB CIC Datasets](https://www.unb.ca/cic/datasets/ddos-2019.html).
 
 
 ## Results and Analysis
@@ -67,14 +67,14 @@ Performance of the models is further detailed in the charts below, illustrating 
 <img src="docs/precision-recall.png">
 * Precision-Recall curves highlighting the balance between precision and recall in model predictions.*
 
-### Discussion
+### Further Analysis
 The reduction in recall on the test set for both models is a critical observation, particularly in the field of cybersecurity where failing to detect an attack can have significant consequences. It suggests a need for further model refinement, perhaps through additional feature engineering, data augmentation, or advanced model tuning, to improve the models' ability to generalize to new data.
 
 Both models showed a promising ability to classify network traffic, with XGBoost displaying a particularly strong capability to learn complex patterns. Nonetheless, the drop in test recall underscores the importance of continuous model evaluation and updating to maintain high performance as new attack vectors emerge.
 
 
 ## Prerequisites
-Make sure you have the following Python packages installed:
+In order to run the code and reproduce the results, please make sure you have the following Python packages installed:
 - pandas
 - numpy
 - xgboost
@@ -86,6 +86,8 @@ You can install these packages using pip:
 ```sh
 pip install pandas numpy xgboost scikit-learn matplotlib joblib
 ```
+### Dataset Download
+Download the data from : [Kaggle](https://www.kaggle.com/datasets/dhoogla/cicddos2019)
 
 ## Installation
 To get a local copy up and running, follow these steps:
