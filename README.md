@@ -74,17 +74,9 @@ Both models showed a promising ability to classify network traffic, with XGBoost
 
 
 ## Prerequisites
-In order to run the code and reproduce the results, please make sure you have the following Python packages installed:
-- pandas
-- numpy
-- xgboost
-- scikit-learn
-- matplotlib
-- joblib
-
-You can install these packages using pip:
+In order to run the code and reproduce the results, please run the code below using pip:
 ```sh
-pip install pandas numpy xgboost scikit-learn matplotlib joblib
+pip install -r requirements.txt
 ```
 ### Dataset Download
 Download the data from : [Kaggle](https://www.kaggle.com/datasets/dhoogla/cicddos2019)
